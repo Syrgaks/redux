@@ -1,29 +1,24 @@
 import React from 'react'
 import './product.css'
-import doto from '../../assets/абв.jpg'
 
-
-function Product() {
+function Product({ data }) {
   return (
-    
-      <div className="product">
-         <div className="product-card">
-           <div className="pro-img">
-              <img src={doto} />
-           </div>
-           <button className="pro-btn">add to card</button>
-           <div className="pro-title">
-            <h6>aigul gulu</h6>
-           </div>
-           <div className="pro-text">
-            <p>$120</p>
-            <h4>500</h4>
-           </div>
-         </div>
-
+    <div className="product">
+      <div className="product-card">
+        <div className="pro-img">
+          <img src={data.imageUrl} />
+        </div>
+        <button className="pro-btn">Add to Cart</button>
+        <div className="pro-title">
+          <h6>{data.title}</h6> 
+        </div>
+        <div className="pro-text">
+          <p>{data.price} $</p> 
+          <h4>{data.quantity}</h4> 
+        </div>
       </div>
-
+    </div>
   )
 }
 
-export default Product
+export default Product;
