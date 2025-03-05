@@ -4,6 +4,7 @@ import { CgSearch } from "react-icons/cg";
 import { FiHeart } from "react-icons/fi";
 import { BsCart4 } from "react-icons/bs";
 import { FiUser } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 
 
@@ -30,12 +31,13 @@ function Header() {
                 <FiHeart className='icon-react' />
                 </div>
             </a>
-            <a href="">
+            <Link to="cartpage">
                 <div className='icon'>
                 <BsCart4 className='icon-react' />
                 <div className='count'> 0 </div>
                 </div>        
-            </a>
+            </Link>
+           
             <a href="">
                 <div className='icon'>
                 <FiUser className='icon-react'/>
