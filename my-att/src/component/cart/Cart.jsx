@@ -11,7 +11,7 @@ function Cart() {
       <div className="card-product">
         <div className="card-block">
           <img src={surot}  className='cardImg'/>
-           <p>flover</p>          
+           <p>floverr</p>          
         </div>
         <p>$300</p>
         <input type='text' />
