@@ -1,25 +1,30 @@
 import React from 'react'
-import surot from '../../assets/абв.jpg'
 import './cart.css'
+import { useSelector } from 'react-redux'
+
 
 function Cart() {
-  //useSelector
+const {cartItem} = useSelector( ( state ) => state.flover )
+  
   return (
     
       <div className='card container'>
       <div className="basket">
+        {
+          cartItem.map( ( item ) => (
       <div className="card-product">
         <div className="card-block">
-          <img src={surot}  className='cardImg'/>
-           <p>flover</p>          
+          <img src={ item.imageUrl }  className='cardImg'/>
+           <p> { item.title } </p>          
         </div>
-        <p>$300</p>
+        <p> {item.price } </p>
         <input type='text' />
-        <p>$200</p>
+        <p> { item.viewsCount } </p>
+      </div>
+     ))
+     }
       </div>
       </div>
-      </div>
-    
   )
 }
 

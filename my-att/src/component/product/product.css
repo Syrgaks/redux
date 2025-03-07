@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #b2b2b2;
+    background-color: #388a60;
 }
 
 .pro-img img{
@@ -30,6 +30,7 @@
     width: 250px;
     color: white;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .pro-title h6{

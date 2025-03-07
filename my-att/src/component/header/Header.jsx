@@ -5,16 +5,18 @@ import { FiHeart } from "react-icons/fi";
 import { BsCart4 } from "react-icons/bs";
 import { FiUser } from "react-icons/fi";
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 
 function Header() {
+  const { cartItem } = useSelector( ( state )  => state.flover )
   return (
     <div className='header container'>
       <div className="header-left">
         <h1>Exlusive</h1>
        <ul>
-        <li> <a href=""> home </a> </li>
+        <li> <Link to="/"> home </Link> </li>
         <li> <a href=""> about </a> </li>
         <li> <a href=""> contact </a> </li>
         <li> <a href=""> sign in </a> </li>
@@ -22,7 +24,7 @@ function Header() {
       </div>
       <div className="header-right">
         <div className="search">
-            <input type="text" placeholder='typing...' />
+            <input type="namber" placeholder='typing...' />
             <CgSearch />
         </div>
         <div className="icons">
@@ -34,7 +36,7 @@ function Header() {
             <Link to="cartpage">
                 <div className='icon'>
                 <BsCart4 className='icon-react' />
-                <div className='count'> 0 </div>
+                <div className='count'> { cartItem.length }</div>
                 </div>        
             </Link>
            

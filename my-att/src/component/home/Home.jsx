@@ -4,8 +4,6 @@ const API = "https://65ab6a1efcd1c9dcffc659a4.mockapi.io/api/v1/advertisement"
 import './home.css'
 import axios from 'axios'
 
-
-
 function Home() {
   const [product, setProduct ] = useState( [] )
   
@@ -16,8 +14,7 @@ function Home() {
       )  }
       
     catch( error ){
-      console.log( error );
-      
+      console.log( error );  
   } }
 
   useEffect( () => {
